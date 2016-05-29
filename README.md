@@ -47,11 +47,11 @@ docker run -d --net host --name nomad \
   -p 4647:4647 -p 4647:4647/udp \
   -p 4648:4648 -p 4648:4648/udp \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  aatarasoff/nomad-client -bind=<your_binding_ip_address> -servers http://<node1_ip>:4647
+  aatarasoff/nomad-client -bind=<your_binding_ip_address> -servers <node1_ip>:4647
 ```
 Check that client nodes is available:
 ```
-curl <node1_ip>/v1/nodes
+curl <node1_ip>:4646/v1/nodes
 ```
 
 ###Run example task
