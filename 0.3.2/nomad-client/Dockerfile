@@ -1,4 +1,4 @@
-FROM jsecchiero/docker-nomad
+FROM jsecchiero/nomad
 ADD ./config /config/
 VOLUME /data
 
