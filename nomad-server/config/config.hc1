@@ -1,4 +1,4 @@
-bind_addr = "0.0.0.0"
+bind_addr = "172.16.110.1"
 
 # Increase log verbosity
 log_level = "INFO"
