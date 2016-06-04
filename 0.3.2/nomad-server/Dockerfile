@@ -1,4 +1,5 @@
 FROM jsecchiero/nomad
-VOLUME /data
+COPY config /
 
+VOLUME /data
 ENTRYPOINT ["/bin/nomad", "agent", "-config=/config/config.hc1"]

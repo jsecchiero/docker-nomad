@@ -12,12 +12,6 @@ services:
     volumes:
       - nomad-server-data:/data
       - /var/run/docker.sock:/var/run/docker.sock
-    volumes_from:
-      - nomad-server-config
-    depends_on:
-      - nomad-server-config
-  nomad-server-config:
-    image: jsecchiero/nomad-server-config
 
 volumes:
   nomad-server-data:
