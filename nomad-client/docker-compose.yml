@@ -1,7 +1,7 @@
 version: '2'
 services:
-  nomad-server:
-    image: jsecchiero/nomad-server
+  nomad-client:
+    image: jsecchiero/nomad-client
     ports:
       - "4646:4646"
       - "4647:4647"
@@ -10,8 +10,8 @@ services:
       - "4647:4647/udp"
       - "4648:4648/udp"
     volumes:
-      - nomad-server-data:/data
+      - nomad-client-data:/data
       - /var/run/docker.sock:/var/run/docker.sock
 
 volumes:
-  nomad-server-data:
+  nomad-client-data:
