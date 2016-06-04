@@ -1,7 +1,7 @@
 version: '2'
 services:
   nomad-server:
-    image: nomad-server
+    image: jsecchiero/nomad-server
     ports:
       - "4646:4646"
       - "4647:4647"
@@ -17,4 +17,7 @@ services:
     depends_on:
       - nomad-server-config
   nomad-server-config:
-    image: nomad-server-config
+    image: jsecchiero/nomad-server-config
+
+volumes:
+  nomad-server-data:
