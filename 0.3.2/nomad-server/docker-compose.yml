@@ -1,0 +1,20 @@
+version: '2'
+services:
+  nomad-server:
+    image: nomad-server
+    ports:
+      - "4646:4646"
+      - "4647:4647"
+      - "4648:4648"
+      - "4646:4646/udp"
+      - "4647:4647/udp"
+      - "4648:4648/udp"
+    volumes:
+      - nomad-server-data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    volumes_from:
+      - nomad-server-config
+    depends_on:
+      - nomad-server-config
+  nomad-server-config:
+    image: nomad-server-config
