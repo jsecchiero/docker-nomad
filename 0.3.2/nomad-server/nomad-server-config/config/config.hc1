@@ -12,5 +12,5 @@ server {
 }
 
 client {
-    enabled = false
+    enabled = true
 }
