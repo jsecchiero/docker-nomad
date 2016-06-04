@@ -1,4 +1,4 @@
-bind_addr = "172.16.110.1"
+bind_addr = "nomad.home"
 
 # Increase log verbosity
 log_level = "INFO"

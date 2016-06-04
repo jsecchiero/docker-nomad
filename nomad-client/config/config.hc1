@@ -10,7 +10,7 @@ data_dir = "/data"
 client {
     enabled = true
 
-    servers = ["172.16.110.1:4647"]
+    servers = ["nomad.home:4647"]
     options {
         "driver.raw_exec.enable" = "1"
     }
