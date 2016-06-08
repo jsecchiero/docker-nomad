@@ -10,6 +10,8 @@ services:
       - "4646:4646/udp"
       - "4647:4647/udp"
       - "4648:4648/udp"
+    dns:
+      - 127.0.0.1
     volumes:
       - nomad-server-data:/data
       - /var/run/docker.sock:/var/run/docker.sock
